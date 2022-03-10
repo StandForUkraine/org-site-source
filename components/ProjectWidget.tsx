@@ -2,10 +2,7 @@ import styled from 'styled-components'
 import { ProjectItem } from 'utils/projects'
 import { useText } from 'core/utils/lang'
 import LazyLoad from 'react-lazyload'
-import Button from 'core/components/Button'
 import { useGtag } from 'core/utils/useGtag'
-import InfoIcon from 'core/assets/info.svg'
-import LegalPopup from 'core/components/LegalPopup'
 import { useState } from 'react'
 import TelegramIcon from 'assets/telegram.svg'
 
@@ -15,14 +12,11 @@ import {
   DonationTitle,
   DonationTags,
   DonationDescription,
-  DonationPayMethods,
   DonationFooter,
   DonationButton,
-  LegalNumber,
 } from 'core/components/DonationWidget'
 
 export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
-  const [visibleLegalPopup, setVisibleLegalPopup] = useState(false)
   const t = useText()
   const gtag = useGtag()
 
