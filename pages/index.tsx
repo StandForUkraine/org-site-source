@@ -1,11 +1,12 @@
-import Index from 'core/home-page'
-import { loadDonations } from 'core/utils/donations'
+import Index from 'components/home-page'
+import { loadProjects } from 'utils/projects'
 
 export async function getStaticProps() {
-  const donations = loadDonations()
+  const projects = loadProjects()
+
   return {
     props: {
-      donations,
+      projects,
     },
   }
 }
