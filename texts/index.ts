@@ -1,25 +1,27 @@
-import en from './en'
-import ua from './ua'
-import coreUA from 'core/texts/ua'
-import coreEN from 'core/texts/en'
+import coreUa from 'core/texts/ua'
+import coreEn from 'core/texts/en'
+import { defaultLang } from 'core/texts'
+export { flagsMap, defaultLang } from 'core/texts'
 
-export const defaultLang = process.env.NEXT_PUBLIC_DEFAULT_LANG as Lang
+import ua from './ua'
+import en from './en'
 
 export const byLang = {
-  ua: {...ua, ...coreUA},
-  en: {...en, ...coreEN},
+	ua: {
+		...coreUa,
+		...ua,
+	},
+  en: {
+    ...coreEn,
+    ...en,
+  },
 } as const
-
-export const flagsMap: Record<Lang, string> = {
-  ua: '🇺🇦',
-  en: '🇬🇧',
-}
 
 export type Lang = keyof typeof byLang
 
 export const langs = Object.keys(byLang) as Lang[]
 
-const defaultLangTexts = byLang[defaultLang]
+const defaultLangTexts = byLang[defaultLang as Lang]
 
 export type Texts = typeof defaultLangTexts
 

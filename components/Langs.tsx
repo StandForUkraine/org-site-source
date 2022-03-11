@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { defaultLang, flagsMap, langs } from 'texts'
+import { defaultLang, flagsMap, langs, Lang } from 'texts'
 import { useLang } from 'core/utils/lang'
 
 export const Langs = () => {
-  const { lang } = useLang()
+  const lang = useLang() as Lang
   return (
     <LangsWrapper>
       {langs.map((langKey) => (
@@ -13,10 +13,13 @@ export const Langs = () => {
           href={langKey === defaultLang ? '/' : '/[lang]/'}
           as={langKey === defaultLang ? '/' : `/${langKey}/`}
         >
-          <Lang href={langKey === defaultLang ? '/' : `/${langKey}/`} isActive={langKey === lang}>
+          <LangItem
+            href={langKey === defaultLang ? '/' : `/${langKey}/`}
+            isActive={langKey === lang}
+          >
             {flagsMap[langKey]}
             <span>{langKey.toUpperCase()}</span>
-          </Lang>
+          </LangItem>
         </Link>
       ))}
     </LangsWrapper>
@@ -39,7 +42,7 @@ const LangsWrapper = styled.div`
   }
 `
 
-const Lang = styled.a<{ isActive?: boolean }>`
+const LangItem = styled.a<{ isActive?: boolean }>`
   background: #f2f2f2;
   border-radius: 40px;
   display: inline-flex;

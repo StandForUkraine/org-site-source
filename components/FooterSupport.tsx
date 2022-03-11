@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { useText } from 'core/utils/lang'
+import { useText } from 'utils/lang'
 
 export default function FooterSupport() {
   const t = useText()

@@ -9,6 +9,7 @@ export default {
 	'Report the enemy': 'Здати ворога',
 	'Cyber frontier': 'Кіберфронт',
 
+	projects: 'проєкти',
 	aboutUs: 'Про нас',
 	supportFinancially: 'Підтримати Україну фінансово',
 

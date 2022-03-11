@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ProjectItem } from 'utils/projects'
-import { useText } from 'core/utils/lang'
+import { useText } from 'utils/lang'
 import LazyLoad from 'react-lazyload'
 import { useGtag } from 'core/utils/useGtag'
 import { useState } from 'react'
@@ -21,9 +21,9 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
   const gtag = useGtag()
 
   return (
-    <DonationPost>
+    <ProjectPost>
       <LazyLoad once offset={500}>
-        <DonationLogo src={project.logo} alt={project.logoAlt || project.title} />
+        <ProjectLogo src={project.logo} alt={project.logoAlt || project.title} />
       </LazyLoad>
 
       <DonationTitle
@@ -64,7 +64,7 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
           </TelegramIconWrapper>
         )}
       </DonationFooter>
-    </DonationPost>
+    </ProjectPost>
   )
 }
 
@@ -74,4 +74,12 @@ const TelegramIconWrapper = styled.div`
   padding: 5px 10px;
   display: flex;
   align-items: center;
+`
+const ProjectLogo = styled(DonationLogo)`
+  height: 64px;
+  max-width: 100%;
+`
+
+const ProjectPost = styled(DonationPost)`
+  vertical-align: top;
 `

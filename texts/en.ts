@@ -9,6 +9,7 @@ export default {
 	'Report the enemy': 'Report the enemy',
 	'Cyber frontier': 'Cyber frontier',
 
+	projects: 'projects',
 	aboutUs: 'About us',
 	supportFinancially: 'Support Ukraine Financially',
 

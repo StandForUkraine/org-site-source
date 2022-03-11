@@ -1,16 +1,18 @@
 import { useState, useMemo, useCallback, useEffect } from 'react'
-import { useLang, useText } from 'core/utils/lang'
+import { useLang } from 'core/utils/lang'
+import { useText } from 'utils/lang'
 import { allTags, Tag } from 'utils/tags'
 import MultipleSelection from 'core/components/MultipleSelection'
 import ProjectWidget from './ProjectWidget'
 import { ProjectItem } from 'utils/projects'
 import TextButton from 'core/components/TextButton'
 import styled from 'styled-components'
+
 export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
-  const t = useText()
   const [selectedTags, setSelectedTags] = useState<Tag[]>([])
   const [showMoreBtn, setShowMoreBtn] = useState<Boolean>(true)
-  const { lang } = useLang()
+  const lang = useLang()
+  const t = useText()
   useEffect(() => {
     if (selectedTags.length > 0) {
       setShowMoreBtn(false)
@@ -52,6 +54,7 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
           allOptions={[...allTags]}
           selectedOptions={selectedTags}
           onOptionClick={onTagClick}
+          toLabel={t}
         />
       </FilterWrapper>
 

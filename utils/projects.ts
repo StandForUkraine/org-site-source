@@ -25,7 +25,7 @@ export interface ProjectItem extends ProjectItemBase {
 }
 
 export const loadProjects = () => {
-  const files = glob.sync(path.join(serverRuntimeConfig.PROJECT_ROOT, 'projects/**/ua.yml'))
+  const files = glob.sync(path.join(serverRuntimeConfig.PROJECT_ROOT, 'donations/**/ua.yml'))
   const data = files
     .map((file) => {
       const id = parseInt(path.basename(path.dirname(file)), 10)

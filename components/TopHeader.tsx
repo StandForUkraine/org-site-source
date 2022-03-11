@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { useLang, useText } from 'core/utils/lang'
+import { Lang } from 'texts'
+import { useLang } from 'core/utils/lang'
+import { useText } from 'utils/lang'
 import TextButton from 'core/components/TextButton'
 import OutIcon from 'core/assets/out.svg'
 
 export const TopHeader = () => {
-  const { lang } = useLang()
+  const lang = useLang() as Lang
   const t = useText()
   const [showMenu, setShowMenu] = useState<boolean>(false)
-  const rootPathname = lang === 'en' ? '/' : `/${lang}`
+  const rootPathname = lang === 'ua' ? '/' : `/${lang}`
 
   return (
     <TopHeaderWrapper>
@@ -63,6 +65,10 @@ const MenuBtn = styled.button`
 
   div:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 `
 
