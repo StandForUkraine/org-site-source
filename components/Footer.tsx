@@ -1,16 +1,8 @@
 import styled from 'styled-components'
-import { useText } from 'core/utils/lang'
-import InstagramIcon from 'core/assets/instagram.svg'
-import FacebookIcon from 'core/assets/facebook.svg'
-import TwitterIcon from 'core/assets/twitter.svg'
+import { useText } from 'utils/lang'
 import TextButton from 'core/components/TextButton'
 import LinkIcon from 'core/components/LinkIcon'
 import Link from 'next/link'
-
-const email = process.env.NEXT_PUBLIC_EMAIL
-const instagramLink = process.env.NEXT_PUBLIC_INSTAGRAM_LINK
-const facebookLink = process.env.NEXT_PUBLIC_FACEBOOK_LINK
-const twitterLink = 'https://twitter.com/' + process.env.NEXT_PUBLIC_TWITTER_USER
 
 export const Hero = () => {
   const t = useText()
@@ -19,49 +11,19 @@ export const Hero = () => {
     <FooterWrapper>
       <Column>
         <FirstColumnText>{t('footerHeader')}</FirstColumnText>
-        <Displaimler>{t('disclaimler')}</Displaimler>
       </Column>
       <Column>
         <SecondColumnTitle>{t('footerGoals')}</SecondColumnTitle>
-        <SecondColumnList>
-          <li>{t('goal1')}</li>
-          <li>{t('goal2')}</li>
-          <li>{t('goal3')}</li>
-          <li>{t('goal4')}</li>
-          <li>{t('goal5')}</li>
-        </SecondColumnList>
         <Link href="/about">
           <AboutProjButton breakpoint="mobile" as="a" href="/about">
             {t('aboutProject')}
           </AboutProjButton>
         </Link>
       </Column>
-      <Column>
-        <p>{t('footerCreds')}</p>
-        <br />
-        <Flags>🇺🇦 🇬🇧 🇫🇷 🇩🇪 🇦🇹 🇵🇱 🇷🇴 🇹🇷</Flags>
-        <br />
-        <p>
-          {t('footerContact')}: <a href={`mailto:${email}`}>{email}</a>
-        </p>
-        <br />
-        <SocialIcons>
-          <span>{t('joinUs')}:</span>
-          <a href={twitterLink} target="_blank" rel="noopener">
-            <TwitterIcon />
-          </a>
-          <a href={facebookLink} target="_blank" rel="noopener">
-            <FacebookIcon />
-          </a>
-          <a href={instagramLink} target="_blank" rel="noopener">
-            <InstagramIcon />
-          </a>
-        </SocialIcons>
-      </Column>
       <FooterExtLinksWrapper>
         <Link href="/about">
           <AboutProjButton breakpoint="desktop" as="a" href="/about">
-            {t('aboutProject')}
+            {t('aboutUs')}
           </AboutProjButton>
         </Link>
         <Spacer />
@@ -121,52 +83,21 @@ const Column = styled.div`
   margin-bottom: 20px;
 
   @media (min-width: 768px) {
-    width: 30%;
+    width: 50%;
     margin-bottom: 0;
   }
 `
 
 const FirstColumnText = styled.p`
+  font-weight: 400;
   font-size: 20px;
-`
-
-const Displaimler = styled.div`
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 20px;
+  line-height: 128%;
 `
 
 const SecondColumnTitle = styled.h3`
   margin: 0;
   font-weight: 400;
-  font-size: 20px;
-`
-
-const SecondColumnList = styled.ul`
-  li {
-    margin-bottom: 5px;
-  }
-`
-
-const Flags = styled.p`
-  font-size: 20px;
-`
-
-const SocialIcons = styled.div`
-  display: flex;
-  align-items: center;
-
-  span {
-    margin-right: 12px;
-  }
-
-  svg {
-    margin-right: 10px;
-
-    &:hover path {
-      fill: #666;
-    }
-  }
+  font-size: 14px;
 `
 
 const AboutProjButton = styled(TextButton)<{ breakpoint: 'mobile' | 'desktop' }>`

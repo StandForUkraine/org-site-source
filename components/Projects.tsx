@@ -65,7 +65,9 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
       ))}
 
       <MoreBtnWrapper>
-        {showMoreBtn && <TextButton onClick={() => setShowMoreBtn(false)}>Усі проєкти</TextButton>}
+        {showMoreBtn && (
+          <TextButton onClick={() => setShowMoreBtn(false)}>{t('allProjects')}</TextButton>
+        )}
       </MoreBtnWrapper>
     </ProjectsWrapper>
   )
