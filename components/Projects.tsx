@@ -60,7 +60,7 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
 
       {filteredProjects.length < 1 && <h1>Nothing found.</h1>}
 
-      {filteredProjects.slice(0, showMoreBtn ? 9 : -1).map((project) => (
+      {filteredProjects.slice(0, showMoreBtn ? 9 : filteredProjects.length).map((project) => (
         <ProjectWidget key={project.id} project={project} />
       ))}
 

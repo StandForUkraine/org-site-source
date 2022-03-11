@@ -31,11 +31,11 @@ export const Hero = () => {
         </Link>
       </Column>
       <FooterExtLinksWrapper>
-        <Link href="/about">
+        {/* <Link href="/about">
           <AboutProjButton breakpoint="desktop" as="a" href="/about">
             {t('aboutUs')}
           </AboutProjButton>
-        </Link>
+        </Link> */}
         <Spacer />
         <ExtLinkButton
           as="a"

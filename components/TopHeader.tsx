@@ -12,7 +12,7 @@ export const TopHeader = () => {
   const t = useText()
   const [showMenu, setShowMenu] = useState<boolean>(false)
   const rootPathname = lang === 'ua' ? '/' : `/${lang}`
-
+  const donationSiteLink = process.env.NEXT_PUBLIC_DONATION_SITE_BASEURL || ''
   return (
     <TopHeaderWrapper>
       <Link href={rootPathname} passHref>
@@ -36,10 +36,10 @@ export const TopHeader = () => {
       </TopHeaderTitle>
 
       <TopLinksWrapper show={showMenu}>
-        <Link href={rootPathname} passHref>
+        {/* <Link href={rootPathname + '/about'} passHref>
           <TextButton>{t('aboutUs')}</TextButton>
-        </Link>
-        <Link href={rootPathname} passHref>
+        </Link> */}
+        <Link href={donationSiteLink} passHref>
           <TextButton>
             {t('supportFinancially')}
             <OutIcon />
@@ -86,7 +86,7 @@ const TopLinksWrapper = styled.div<TopLinksWrapperProps>`
   display: ${(props) => (props.show ? 'flex' : 'none')};
   align-items: center;
 
-  button:nth-child(2) {
+  button:last-child {
     svg {
       margin-left: 4px;
     }
@@ -116,7 +116,7 @@ const TopLinksWrapper = styled.div<TopLinksWrapperProps>`
       padding: 0 24px;
     }
 
-    button:nth-child(2) {
+    button:last-child {
       border-left: 1px solid #bdbdbd;
     }
   }
