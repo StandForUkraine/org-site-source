@@ -32,7 +32,7 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
         rel="noopener"
         onClick={() =>
           gtag('event', 'external_link_click', {
-            event_category: 'home_page',
+            event_category: 'project-title',
             event_label: project.link,
           })
         }
@@ -49,12 +49,12 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
           href={project.link}
           target="_blank"
           rel="noopener"
-          // onClick={() =>
-          //   gtag('event', 'external_link_click', {
-          //     event_category: 'donate',
-          //     event_label: project.link,
-          //   })
-          // }
+          onClick={() =>
+            gtag('event', 'external_link_click', {
+              event_category: 'project',
+              event_label: project.link,
+            })
+          }
         >
           {t('openButton')}
         </DonationButton>
