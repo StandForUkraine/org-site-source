@@ -19,7 +19,7 @@ import {
 export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
   const t = useText()
   const gtag = useGtag()
-
+  const getTags = () => project.tags.map((tag) => t(tag))
   return (
     <ProjectPost>
       <LazyLoad once offset={500}>
@@ -40,7 +40,7 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
         {project.title}
       </DonationTitle>
 
-      <DonationTags>{project.tags.join(', ')}</DonationTags>
+      <DonationTags>{getTags().join(', ')}</DonationTags>
       <DonationDescription>{project.description}</DonationDescription>
 
       <DonationFooter>
