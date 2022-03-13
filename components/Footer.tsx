@@ -4,10 +4,10 @@ import TextButton from 'core/components/TextButton'
 import LinkIcon from 'core/components/LinkIcon'
 import Link from 'next/link'
 import {
-  FooterWrapper,
+  FooterWrapper as FooterWrapperCore,
   Column as FooterColumn,
-  FirstColumnText,
-  SecondColumnTitle,
+  FirstColumnText as FirstColumnTextCore,
+  SecondColumnTitle as SecondColumnTitleCore,
   AboutProjButton,
   Spacer,
   ExtLinkButton,
@@ -23,12 +23,12 @@ export const Hero = () => {
         <FirstColumnText>{t('footerHeader')}</FirstColumnText>
       </Column>
       <Column>
-        <SecondColumnTitle>{t('footerGoals')}</SecondColumnTitle>
-        <Link href="/about">
+        {/* <Link href="/about">
           <AboutProjButton breakpoint="mobile" as="a" href="/about">
             {t('aboutProject')}
           </AboutProjButton>
-        </Link>
+        </Link> */}
+        <SecondColumnTitle>{t('footerGoals')}</SecondColumnTitle>
       </Column>
       <FooterExtLinksWrapper>
         {/* <Link href="/about">
@@ -71,8 +71,35 @@ export const Hero = () => {
 
 export default Hero
 
+const FooterWrapper = styled(FooterWrapperCore)`
+  padding: 24px 0 37px;
+
+  @media (max-width: 768px) {
+    padding: 24px 16px 37px;
+  }
+`
+
 const Column = styled(FooterColumn)`
   @media (min-width: 768px) {
     width: 50%;
+  }
+`
+
+const FirstColumnText = styled(FirstColumnTextCore)`
+  font-size: 20px;
+  line-height: 128%;
+  color: #4f4f4f;
+  @media (max-width: 768px) {
+    margin-bottom: 14px !important;
+  }
+`
+
+const SecondColumnTitle = styled(SecondColumnTitleCore)`
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+
+  @media (max-width: 768px) {
+    margin-top: 36px;
   }
 `
