@@ -36,7 +36,7 @@ const FooterSupportWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-
+  padding: 0 16px;
   @media (min-width: 768px) {
     flex-direction: row;
   }
@@ -45,7 +45,7 @@ const FooterSupportColumn = styled.div`
   display: flex;
   align-items: center;
   flex: 0 1 80%;
-  margin: 0 auto 16px;
+  margin: 0 0 40px;
 
   @media (min-width: 768px) {
     flex: 0 1 20%;
@@ -55,6 +55,8 @@ const FooterSupportColumn = styled.div`
 
 const FooterSupportImage = styled.img`
   margin-right: 16px;
+  width: 56px;
+  height: 56px;
 `
 const FooterSupportText = styled.p`
   font-size: 14px;
@@ -67,8 +69,13 @@ const FooterSupportTitle = styled.h3`
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
-  text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #828282;
+  padding: 0 16px;
+  margin: 0 0 12px 0;
+
+  @media (min-width: 768px) {
+    text-align: center;
+  }
 `
