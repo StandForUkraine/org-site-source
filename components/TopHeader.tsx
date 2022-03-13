@@ -6,6 +6,7 @@ import { useLang } from 'core/utils/lang'
 import { useText } from 'utils/lang'
 import TextButton from 'core/components/TextButton'
 import OutIcon from 'core/assets/out.svg'
+import MenuIcon from 'assets/menu.svg'
 
 export const TopHeader = () => {
   const lang = useLang() as Lang
@@ -48,9 +49,7 @@ export const TopHeader = () => {
       </TopLinksWrapper>
 
       <MenuBtn onClick={() => setShowMenu(!showMenu)}>
-        <MenuBtnLine />
-        <MenuBtnLine />
-        <MenuBtnLine />
+        <MenuIcon />
       </MenuBtn>
     </TopHeaderWrapper>
   )
@@ -61,27 +60,17 @@ export default TopHeader
 const MenuBtn = styled.button`
   background: none;
   border: none;
-  padding: 0 16px;
-
-  div:last-child {
-    margin-bottom: 0;
-  }
+  padding: 16px;
 
   @media (min-width: 768px) {
     display: none;
   }
 `
 
-const MenuBtnLine = styled.div`
-  height: 2px;
-  width: 24px;
-  margin-bottom: 4px;
-  background: #000000;
-`
-
 interface TopLinksWrapperProps {
   show?: boolean
 }
+
 const TopLinksWrapper = styled.div<TopLinksWrapperProps>`
   display: ${(props) => (props.show ? 'flex' : 'none')};
   align-items: center;
@@ -129,11 +118,24 @@ const TopNavSubLink = styled.p`
   letter-spacing: 0.08em;
   text-transform: uppercase;
   display: inline-block;
-  margin: 0 0 0 8px;
+  margin: 0;
+
+  @media (min-width: 768px) {
+    margin: 0 0 0 8px;
+  }
 `
 const TopNavLink = styled.a`
   color: inherit;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: 768px) {
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+  }
 `
 
 const TopHeaderWrapper = styled.div`
@@ -147,7 +149,7 @@ const TopHeaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.04);
-
+  padding-left: 16px;
   @media (min-width: 768px) {
     justify-content: flex-start;
   }
@@ -170,6 +172,8 @@ const TopHeaderTitle = styled.h1`
   line-height: 26px;
   font-weight: 700;
   flex-grow: 1;
+  margin: 0;
+  margin-left: 8px;
 
   @media (min-width: 375px) {
     font-size: 20px;
@@ -179,5 +183,6 @@ const TopHeaderTitle = styled.h1`
   @media (min-width: 768px) {
     text-align: left;
     padding-left: 72px;
+    margin-left: 0;
   }
 `
