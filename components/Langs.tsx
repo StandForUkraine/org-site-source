@@ -34,10 +34,9 @@ const LangsWrapper = styled.div`
   margin: auto;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 
   @media (min-width: 600px) {
-    justify-content: center;
     padding-top: 38px;
   }
 `
