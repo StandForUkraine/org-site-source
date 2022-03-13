@@ -88,4 +88,7 @@ const MoreBtnWrapper = styled.div`
 
 const FilterWrapper = styled.div`
   margin: auto;
+  @media (min-width: 768px) {
+    max-width: max-content;
+  }
 `
