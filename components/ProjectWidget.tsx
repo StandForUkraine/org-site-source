@@ -76,8 +76,8 @@ const TelegramIconWrapper = styled.div`
   align-items: center;
 `
 const ProjectLogo = styled(DonationLogo)`
-  height: 64px;
-  max-width: 100%;
+  max-height: 64px;
+  max-width: 200px;
 `
 
 const ProjectPost = styled(DonationPost)`
