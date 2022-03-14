@@ -33,12 +33,34 @@ export default {
 	aboutHeader: 'About Us',
 	aboutHeaderText1: `We are a volunteer IT organization StandForUkraine which unites more than 1,000 Ukrainian specialists in the technical, business and many other fields.`,
 	aboutHeaderText2: 'Our mission is to support soft infrastructure.',
-	aboutPointHeader: 'Ми створюємо сайти, телеграм-боти та інші технології для забезпечення соціальної инфраструктури та кібербезпеки.',
-	aboutPointText1: '🌍 Поширюємо перевірену інформації на 20+ мовах',
-	aboutPointText2: '📣 Створюємо контрпропаганду та інфографіку, масово закуповуемо рекламу',
-	aboutPointText3: `👁 Проводимо розвідку за допомогою технологій комп'ютерного бачення та обробки природної мови`,
-	aboutPointText4: `🛡 Захищаемо наші онлайн ресуси та виводимо з ладу інфраструктуру ворога за допомогою кібератак`,
-	aboutPointText5: '📦 Залучаемо кошти для гуманітарної допомоги цивільним, ЗСУ, ТрО та добровольцям',
+	aboutPointHeader: 'We create websites, telegram bots and other technologies to provide social infrastructure and cybersecurity',
+	aboutPointText1: '🌍 Translate operational information into 20+ languages',
+	aboutPointText2: '📣 Create graphic materials and distribute information, mass purchase advertising, and traffic',
+	aboutPointText3: `👁 Conducting reconnaissance with computer vision technology and natural language processing`,
+	aboutPointText4: `🛡 Protect and create mirrors for webpages, run cyber-attacks`,
+	aboutPointText5: '📦 Providing humanitarian aid to the Ukrainian population, the Armed Forces of Ukraine, the territorial defence forces, and volunteers',
 
-	aboutTeamHeader: 'Our Team'
+	aboutTeamHeader: 'Our Team',
+	joinTeamHeader: 'Та понад 1000 інших українців  з різних точок земної кулі',
+	joinTeamBtn: 'Долучитися',
+	aboutPressHeader: 'Media about us',
+
+	// About page press block
+	pressTitle1: 'Ukrainian IT community has created a Telegram bot that coordinates volunteers helping',
+	pressText1: 'SaveUA enables everyone in Ukraine to get or provide help.',
+	pressAboutText1: 'About bot «Saveua»',
+
+	pressTitle2: 'Ukraine digital army brews cyberattacks, intel and infowar',
+	pressText2: 'Ukraine’s bootstrap digital army becomes a center of information combat and intelligence crowdsourcing.',
+
+	pressTitle3: 'Як отримати медичну консультацію. Запрацював безкоштовний бот «Турбота».',
+	pressText3: 'Liberator дозволяє кожному користувачу інтернету з VPN атакувати сайти російських пропагандистів. ',
+	pressAboutText3: 'Про бот «Турбота»',
+
+	pressTitle4: 'Перезапустили сайт Opir, що працював ще на Майдані: тут дані про їжу, ліки, укриття',
+	pressText4: 'Мета сайту: надати користувачам дані по забезпеченню їжею, укриттям, лікам, пунктам медичної допомоги тощо.',
+	pressAboutText4: 'Про мапу «Опір»',
+
+	pressTitle5: 'Все, що потрібно – інтернет та ПК. «Liberator» — програма для DDoS-атак на сайти РФ.',
+	pressText5: 'Liberator дозволяє кожному користувачу інтернету з VPN атакувати сайти російських пропагандистів.',
 }

@@ -27,7 +27,7 @@ const HeroWrapper = styled.div`
   align-items: center;
 `
 
-const HeroHeader = styled.h1`
+export const HeroHeader = styled.h1`
   font-size: 64px;
   line-height: 78px;
   font-weight: 900;
@@ -42,7 +42,7 @@ const HeroHeader = styled.h1`
   }
 `
 
-const HeroText = styled.p`
+export const HeroText = styled.p`
   font-size: 20px;
   line-height: 140%;
   text-align: center;

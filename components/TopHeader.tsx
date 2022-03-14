@@ -37,9 +37,9 @@ export const TopHeader = () => {
       </TopHeaderTitle>
 
       <TopLinksWrapper show={showMenu}>
-        {/* <Link href={rootPathname + '/about'} passHref>
+        <Link href={rootPathname + '/about'} passHref>
           <TextButton>{t('aboutUs')}</TextButton>
-        </Link> */}
+        </Link>
         <Link href={donationSiteLink} passHref>
           <TextButton>
             {t('supportFinancially')}

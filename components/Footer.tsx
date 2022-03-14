@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import { useText } from 'utils/lang'
+import { Lang } from 'texts'
+import { useLang } from 'core/utils/lang'
 import TextButton from 'core/components/TextButton'
 import LinkIcon from 'core/components/LinkIcon'
 import Link from 'next/link'
@@ -16,28 +18,29 @@ import {
 
 export const Hero = () => {
   const t = useText()
-
+  const lang = useLang() as Lang
+  const rootPathname = lang === 'ua' ? '/' : `/${lang}`
   return (
     <FooterWrapper>
       <Column>
         <FirstColumnText>{t('footerHeader')}</FirstColumnText>
       </Column>
       <Column>
-        {/* <Link href="/about">
+        <Link href={rootPathname + '/about'}>
           <AboutProjButton breakpoint="mobile" as="a" href="/about">
-            {t('aboutProject')}
+            {t('aboutUs')}
           </AboutProjButton>
-        </Link> */}
+        </Link>
         <SecondColumnTitle>{t('footerGoals')}</SecondColumnTitle>
       </Column>
       <FooterExtLinksWrapper>
-        {/* <Link href="/about">
+        <Link href={rootPathname + '/about'}>
           <AboutProjButton breakpoint="desktop" as="a" href="/about">
             {t('aboutUs')}
           </AboutProjButton>
-        </Link> */}
+        </Link>
         <Spacer />
-        <ExtLinkButton
+        {/* <ExtLinkButton
           as="a"
           href="https://forms.gle/2F5S4A52EVWPJym56"
           target="_blank"
@@ -54,7 +57,7 @@ export const Hero = () => {
         >
           <span>{t('sharedFeedbackLink')}</span>
           <LinkIcon />
-        </ExtLinkButton>
+        </ExtLinkButton> */}
         <ExtLinkButton
           as="a"
           href="https://ukrforeignlegion.com/"
