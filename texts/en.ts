@@ -53,14 +53,17 @@ export default {
 	pressTitle2: 'Ukraine digital army brews cyberattacks, intel and infowar',
 	pressText2: 'Ukraine’s bootstrap digital army becomes a center of information combat and intelligence crowdsourcing.',
 
-	pressTitle3: 'Як отримати медичну консультацію. Запрацював безкоштовний бот «Турбота».',
-	pressText3: 'Liberator дозволяє кожному користувачу інтернету з VPN атакувати сайти російських пропагандистів. ',
-	pressAboutText3: 'Про бот «Турбота»',
+	pressTitle3: 'How to get a medical consultation. Free bot Care',
+	pressText3: 'The medical bot helps to find doctors. Among specialists: psychologists, neurologists, infectious disease specialists, endocrinologists, etc.',
+	pressAboutText3: 'About bot «Турбота»',
 
-	pressTitle4: 'Перезапустили сайт Opir, що працював ще на Майдані: тут дані про їжу, ліки, укриття',
-	pressText4: 'Мета сайту: надати користувачам дані по забезпеченню їжею, укриттям, лікам, пунктам медичної допомоги тощо.',
-	pressAboutText4: 'Про мапу «Опір»',
+	pressTitle4: 'Opir website, which was operating during the Revolution of Dignity, was relaunched',
+	pressText4: `The website's goal is to provide users with information on resources available: food, shelter, medicine, medical care centers, etc.`,
+	pressAboutText4: 'About map «Опір»',
 
-	pressTitle5: 'Все, що потрібно – інтернет та ПК. «Liberator» — програма для DDoS-атак на сайти РФ.',
-	pressText5: 'Liberator дозволяє кожному користувачу інтернету з VPN атакувати сайти російських пропагандистів.',
+	pressTitle5: 'All you need is the Internet and a PC. Liberator – a program for DDoS attacks on Russian sites',
+	pressText5: 'Liberator enables every Internet user with a VPN to attack the websites of Russian propagandists.',
+
+	pressTitle6: 'Technological wars - the story of one  chat with 1000+ volunteers',
+	pressText6: 'How the work in one of the many volunteer IT communities is built.'
 }

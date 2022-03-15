@@ -5,7 +5,6 @@ import { useGtag } from 'core/utils/useGtag'
 
 export default function AboutPress() {
   const t = useText()
-  const gtag = useGtag()
 
   return (
     <PressWrapper>
@@ -13,23 +12,9 @@ export default function AboutPress() {
         <PressItemTop>
           <div>
             <PressItemTitle>{t('pressTitle1')}</PressItemTitle>
-            <Link href={pressLinks[0].link}>
-              <PressItemLink
-                target="_blank"
-                rel="noopener"
-                onClick={() =>
-                  gtag('event', 'external_link_click', {
-                    event_category: 'press',
-                    event_label: pressLinks[0].link,
-                  })
-                }
-                href={pressLinks[0].link}
-              >
-                {pressLinks[0].linkName}
-              </PressItemLink>
-            </Link>
+            <PressLink linkIndex={0} />
           </div>
-          <PressItemImage src="/press/today.png" />
+          <PressItemImage src="/press/Today.png" />
         </PressItemTop>
         <PressItemText>«{t('pressText1')}»</PressItemText>
         <PressItemBottom>
@@ -42,9 +27,7 @@ export default function AboutPress() {
         <PressItemTop>
           <div>
             <PressItemTitle>{t('pressTitle2')}</PressItemTitle>
-            <Link href={pressLinks[1].link}>
-              <PressItemLink href={pressLinks[1].link}>{pressLinks[1].linkName}</PressItemLink>
-            </Link>
+            <PressLink linkIndex={1} />
           </div>
           <PressItemImage src="/press/AP.png" />
         </PressItemTop>
@@ -59,9 +42,7 @@ export default function AboutPress() {
         <PressItemTop>
           <div>
             <PressItemTitle>{t('pressTitle3')}</PressItemTitle>
-            <Link href={pressLinks[2].link}>
-              <PressItemLink href={pressLinks[2].link}>{pressLinks[2].linkName}</PressItemLink>
-            </Link>
+            <PressLink linkIndex={2} />
           </div>
         </PressItemTop>
         <PressItemText>«{t('pressText3')}»</PressItemText>
@@ -75,9 +56,7 @@ export default function AboutPress() {
         <PressItemTop>
           <div>
             <PressItemTitle>{t('pressTitle4')}</PressItemTitle>
-            <Link href={pressLinks[3].link}>
-              <PressItemLink href={pressLinks[3].link}>{pressLinks[3].linkName}</PressItemLink>
-            </Link>
+            <PressLink linkIndex={3} />
           </div>
         </PressItemTop>
         <PressItemText>«{t('pressText4')}»</PressItemText>
@@ -91,12 +70,21 @@ export default function AboutPress() {
         <PressItemTop>
           <div>
             <PressItemTitle>{t('pressTitle5')}</PressItemTitle>
-            <Link href={pressLinks[4].link}>
-              <PressItemLink href={pressLinks[4].link}>{pressLinks[4].linkName}</PressItemLink>
-            </Link>
+            <PressLink linkIndex={4} />
           </div>
         </PressItemTop>
         <PressItemText>«{t('pressText5')}»</PressItemText>
+      </PressItem>
+
+      <PressItem size="large">
+        <PressItemTop>
+          <div>
+            <PressItemTitle>{t('pressTitle6')}</PressItemTitle>
+            <PressLink linkIndex={5} />
+          </div>
+          <PressItemImage src="/press/dou.png" />
+        </PressItemTop>
+        <PressItemText>«{t('pressText6')}»</PressItemText>
       </PressItem>
     </PressWrapper>
   )
@@ -112,10 +100,6 @@ const pressLinks = [
     linkName: 'apnews.com',
   },
   {
-    link: 'https://ain.ua/2022/03/07/vse-shho-potribno-internet-ta-pk-liberator-programa-dlya-ddos-atak-na-sajty-rf/',
-    linkName: 'ain.ua',
-  },
-  {
     link: 'https://ain.ua/2022/03/01/yak-otrymaty-medychnu-konsultacziyu-zapraczyuvav-bezkoshtovnyj-bot-turbota/',
     linkName: 'ain.ua',
   },
@@ -123,7 +107,37 @@ const pressLinks = [
     link: 'https://ain.ua/2022/02/28/perezapustyly-sajt-opir/',
     linkName: 'ain.ua',
   },
+  {
+    link: 'https://ain.ua/2022/03/07/vse-shho-potribno-internet-ta-pk-liberator-programa-dlya-ddos-atak-na-sajty-rf/',
+    linkName: 'ain.ua',
+  },
+  {
+    link: 'https://dou.ua/forums/topic/37139/',
+    linkName: 'dou.ua',
+  },
 ]
+
+const PressLink = ({ linkIndex }: { linkIndex: number }) => {
+  const gtag = useGtag()
+
+  return (
+    <Link href={pressLinks[linkIndex].link}>
+      <PressItemLink
+        target="_blank"
+        rel="noopener"
+        onClick={() =>
+          gtag('event', 'external_link_click', {
+            event_category: 'press',
+            event_label: pressLinks[linkIndex].link,
+          })
+        }
+        href={pressLinks[linkIndex].link}
+      >
+        {pressLinks[linkIndex].linkName}
+      </PressItemLink>
+    </Link>
+  )
+}
 
 interface PressItemProps {
   size?: 'large'
