@@ -19,14 +19,16 @@ import {
 export const Hero = () => {
   const t = useText()
   const lang = useLang() as Lang
-  const rootPathname = lang === 'ua' ? '/' : `/${lang}`
+  const rootPathname = lang === 'ua' ? '/' : `/${lang}/`
+  const contactEmail = process.env.NEXT_PUBLIC_EMAIL
+  //mailto:${email}
   return (
     <FooterWrapper>
       <Column>
         <FirstColumnText>{t('footerHeader')}</FirstColumnText>
       </Column>
       <Column>
-        <Link href={rootPathname + '/about'}>
+        <Link href={rootPathname + 'about'}>
           <AboutProjButton breakpoint="mobile" as="a" href="/about">
             {t('aboutUs')}
           </AboutProjButton>
@@ -34,7 +36,7 @@ export const Hero = () => {
         <SecondColumnTitle>{t('footerGoals')}</SecondColumnTitle>
       </Column>
       <FooterExtLinksWrapper>
-        <Link href={rootPathname + '/about'}>
+        <Link href={rootPathname + 'about'}>
           <AboutProjButton breakpoint="desktop" as="a" href="/about">
             {t('aboutUs')}
           </AboutProjButton>
@@ -58,6 +60,9 @@ export const Hero = () => {
           <span>{t('sharedFeedbackLink')}</span>
           <LinkIcon />
         </ExtLinkButton> */}
+        <ContactLink as="a" href={`mailto:${contactEmail}`}>
+          {t('contactUs')}: {contactEmail}
+        </ContactLink>
         <ExtLinkButton
           as="a"
           href="https://ukrforeignlegion.com/"
@@ -106,3 +111,5 @@ const SecondColumnTitle = styled(SecondColumnTitleCore)`
     margin-top: 36px;
   }
 `
+
+const ContactLink = styled(ExtLinkButton)``

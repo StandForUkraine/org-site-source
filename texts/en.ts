@@ -22,6 +22,7 @@ export default {
 
 	footerHeader: `Stand For Ukraine is a volunteer initiative that unites more than 1,000 Ukrainian IT specialists.`,
 	footerGoals: `We cooperate with large Ukrainian businesses: tier 1 IT companies, venture funds, media agencies, holdings, opinion leaders, and many others.`,
+	contactUs: `Contact us`,
 
 	footerSupportHeader: 'SUPPORTED BY',
 	footerSupportText1: 'Збройних сили України',
@@ -31,14 +32,13 @@ export default {
 
 	// About page
 	aboutHeader: 'About Us',
-	aboutHeaderText1: `We are a volunteer IT organization StandForUkraine which unites more than 1,000 Ukrainian specialists in the technical, business and many other fields.`,
-	aboutHeaderText2: 'Our mission is to support soft infrastructure.',
-	aboutPointHeader: 'We create websites, telegram bots and other technologies to provide social infrastructure and cybersecurity',
-	aboutPointText1: '🌍 Translate operational information into 20+ languages',
-	aboutPointText2: '📣 Create graphic materials and distribute information, mass purchase advertising, and traffic',
-	aboutPointText3: `👁 Conducting reconnaissance with computer vision technology and natural language processing`,
-	aboutPointText4: `🛡 Protect and create mirrors for webpages, run cyber-attacks`,
-	aboutPointText5: '📦 Providing humanitarian aid to the Ukrainian population, the Armed Forces of Ukraine, the territorial defence forces, and volunteers',
+	aboutHeaderText1: `We are a volunteer IT organization StandForUkraine, which unites more than 1,000 leading Ukrainian specialists in technical, creative, and many other industries.`,
+	aboutPointHeader: 'We develop websites and telegram bots, create digital communication materials, buy advertising and traffic, and provide cyber security.',
+	aboutPointText: 'What we do:',
+	aboutPointText1: '📣 inform Ukrainians and collect information;',
+	aboutPointText2: '📦 provide humanitarian assistance to the population, the Armed Forces, the Armed Forces, and volunteers;',
+	aboutPointText3: `🌍 international PR;`,
+	aboutPointText4: `👁 organize a cyber attack on the critical infrastructure of the enemy.`,
 
 	aboutTeamHeader: 'Our Team',
 	joinTeamHeader: 'Та понад 1000 інших українців  з різних точок земної кулі',

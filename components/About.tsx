@@ -28,11 +28,11 @@ export default function About() {
         <PointsWrapper>
           <PointsHeader>{t('aboutPointHeader')}</PointsHeader>
           <PointsList>
+            <PointsListItem>{t('aboutPointText')}</PointsListItem>
             <PointsListItem>{t('aboutPointText1')}</PointsListItem>
             <PointsListItem>{t('aboutPointText2')}</PointsListItem>
             <PointsListItem>{t('aboutPointText3')}</PointsListItem>
             <PointsListItem>{t('aboutPointText4')}</PointsListItem>
-            <PointsListItem>{t('aboutPointText5')}</PointsListItem>
           </PointsList>
         </PointsWrapper>
 
@@ -163,6 +163,12 @@ const PointsListItem = styled.div`
   line-height: 140%;
   color: #4f4f4f;
   margin: 12px 0px;
+
+  @media (min-width: 768px) {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 `
 
 const AboutBlockTitle = styled.h3`
