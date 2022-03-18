@@ -12,7 +12,7 @@ export const TopHeader = () => {
   const lang = useLang() as Lang
   const t = useText()
   const [showMenu, setShowMenu] = useState<boolean>(false)
-  const rootPathname = lang === 'ua' ? '/' : `/${lang}`
+  const rootPathname = lang === 'ua' ? '/' : `/${lang}/`
   const donationSiteLink = process.env.NEXT_PUBLIC_DONATION_SITE_BASEURL || ''
   return (
     <TopHeaderWrapper>
@@ -37,7 +37,7 @@ export const TopHeader = () => {
       </TopHeaderTitle>
 
       <TopLinksWrapper show={showMenu}>
-        <Link href={rootPathname + '/about'} passHref>
+        <Link href={rootPathname + 'about'} passHref>
           <TextButton>{t('aboutUs')}</TextButton>
         </Link>
         <Link href={donationSiteLink} passHref>
