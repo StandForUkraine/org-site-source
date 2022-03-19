@@ -21,7 +21,7 @@ export const Hero = () => {
   const lang = useLang() as Lang
   const rootPathname = lang === 'ua' ? '/' : `/${lang}/`
   const contactEmail = process.env.NEXT_PUBLIC_EMAIL
-  //mailto:${email}
+
   return (
     <FooterWrapper>
       <Column>
@@ -60,9 +60,12 @@ export const Hero = () => {
           <span>{t('sharedFeedbackLink')}</span>
           <LinkIcon />
         </ExtLinkButton> */}
-        <ContactLink as="a" href={`mailto:${contactEmail}`}>
-          {t('contactUs')}: {contactEmail}
-        </ContactLink>
+        <ContactLinkText>
+          {t('contactUs')}:{' '}
+          <ContactLink as="a" href={`mailto:${contactEmail}`}>
+            {contactEmail}
+          </ContactLink>
+        </ContactLinkText>
         <ExtLinkButton
           as="a"
           href="https://ukrforeignlegion.com/"
@@ -112,4 +115,12 @@ const SecondColumnTitle = styled(SecondColumnTitleCore)`
   }
 `
 
-const ContactLink = styled(ExtLinkButton)``
+const ContactLink = styled(ExtLinkButton)`
+  padding: 0;
+`
+
+const ContactLinkText = styled.span`
+  color: #828282;
+  font-size: 14px;
+  line-height: 20px;
+`
