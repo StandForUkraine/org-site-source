@@ -60,9 +60,11 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
 
       {filteredProjects.length < 1 && <h1>Nothing found.</h1>}
 
-      {filteredProjects.slice(0, showMoreBtn ? 9 : filteredProjects.length).map((project) => (
-        <ProjectWidget key={project.id} project={project} />
-      ))}
+      <ListWrapper>
+        {filteredProjects.slice(0, showMoreBtn ? 9 : filteredProjects.length).map((project) => (
+          <ProjectWidget key={project.id} project={project} />
+        ))}
+      </ListWrapper>
 
       <MoreBtnWrapper>
         {showMoreBtn && (
@@ -91,4 +93,8 @@ const FilterWrapper = styled.div`
   @media (min-width: 768px) {
     max-width: max-content;
   }
+`
+const ListWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `

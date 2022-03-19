@@ -9,10 +9,10 @@ import TelegramIcon from 'assets/telegram.svg'
 import {
   DonationPost,
   DonationLogo,
-  DonationTitle,
+  DonationTitle as DonationTitleCore,
   DonationTags,
   DonationDescription,
-  DonationFooter,
+  DonationFooter as DonationFooterCore,
   DonationButton,
 } from 'core/components/DonationWidget'
 
@@ -93,5 +93,25 @@ const ProjectLogo = styled(DonationLogo)`
 `
 
 const ProjectPost = styled(DonationPost)`
-  vertical-align: top;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    .lazyload-wrapper {
+      text-align: center;
+    }
+  }
+`
+
+const DonationFooter = styled(DonationFooterCore)`
+  margin: auto 0 0;
+
+  @media (max-width: 768px) {
+    margin: 8px auto 0;
+  }
+`
+const DonationTitle = styled(DonationTitleCore)`
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `
