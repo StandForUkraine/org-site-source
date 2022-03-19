@@ -25,10 +25,10 @@ export default {
 	contactUs: `Contact us`,
 
 	footerSupportHeader: 'SUPPORTED BY',
-	footerSupportText1: 'Збройних сили України',
-	footerSupportText2: 'Служби безпеки України',
-	footerSupportText3: 'Міністерства внутрішніх справ України',
-	footerSupportText4: 'Міністерства цифрової трансформації України',
+	footerSupportText1: 'Armed Forces of Ukraine',
+	footerSupportText2: 'Security Service of Ukraine',
+	footerSupportText3: 'Ministry of Internal Affairs of Ukraine',
+	footerSupportText4: 'Ministry of Digital Transformation of Ukraine',
 
 	// About page
 	aboutHeader: 'About Us',
