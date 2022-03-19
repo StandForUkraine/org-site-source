@@ -70,6 +70,10 @@ const FooterSupportText = styled.a`
   color: #828282;
   margin: 0;
   text-decoration: none;
+
+  &:hover {
+    color: #2d9cdb;
+  }
 `
 
 const FooterSupportTitle = styled.h3`

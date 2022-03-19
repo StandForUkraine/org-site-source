@@ -88,6 +88,10 @@ const FooterWrapper = styled(FooterWrapperCore)`
   @media (max-width: 768px) {
     padding: 24px 16px 37px;
   }
+
+  a:visited {
+    color: #2d9cdb;
+  }
 `
 
 const Column = styled(FooterColumn)`
@@ -117,6 +121,7 @@ const SecondColumnTitle = styled(SecondColumnTitleCore)`
 
 const ContactLink = styled(ExtLinkButton)`
   padding: 0;
+  color: #2d9cdb;
 `
 
 const ContactLinkText = styled.span`
