@@ -10,22 +10,28 @@ export default function FooterSupport() {
       <FooterSupportWrapper>
         <FooterSupportColumn>
           <FooterSupportImage src="/support/support_1.png" />
-          <FooterSupportText>{t('footerSupportText1')}</FooterSupportText>
+          <FooterSupportText href="https://www.zsu.gov.ua/">
+            {t('footerSupportText1')}
+          </FooterSupportText>
         </FooterSupportColumn>
 
         <FooterSupportColumn>
           <FooterSupportImage src="/support/support_2.png" />
-          <FooterSupportText>{t('footerSupportText2')}</FooterSupportText>
+          <FooterSupportText href="https://ssu.gov.ua">{t('footerSupportText2')}</FooterSupportText>
         </FooterSupportColumn>
 
         <FooterSupportColumn>
           <FooterSupportImage src="/support/support_3.png" />
-          <FooterSupportText>{t('footerSupportText3')}</FooterSupportText>
+          <FooterSupportText href="https://www.kmu.gov.ua/">
+            {t('footerSupportText3')}
+          </FooterSupportText>
         </FooterSupportColumn>
 
         <FooterSupportColumn>
           <FooterSupportImage src="/support/support_4.png" />
-          <FooterSupportText>{t('footerSupportText4')}</FooterSupportText>
+          <FooterSupportText href="https://thedigital.gov.ua/">
+            {t('footerSupportText4')}
+          </FooterSupportText>
         </FooterSupportColumn>
       </FooterSupportWrapper>
     </>
@@ -58,11 +64,12 @@ const FooterSupportImage = styled.img`
   width: 56px;
   height: 56px;
 `
-const FooterSupportText = styled.p`
+const FooterSupportText = styled.a`
   font-size: 14px;
   line-height: 140%;
   color: #828282;
   margin: 0;
+  text-decoration: none;
 `
 
 const FooterSupportTitle = styled.h3`
