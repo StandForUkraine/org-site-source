@@ -86,6 +86,16 @@ export default function AboutPress() {
         </PressItemTop>
         <PressItemText>«{t('pressText6')}»</PressItemText>
       </PressItem>
+      <PressItem size="large">
+        <PressItemTop>
+          <div>
+            <PressItemTitle>{t('pressTitle7')}</PressItemTitle>
+            <PressLink linkIndex={6} />
+          </div>
+          <PressItemImage src="/press/fix.png" />
+        </PressItemTop>
+        <PressItemText>«{t('pressText7')}»</PressItemText>
+      </PressItem>
     </PressWrapper>
   )
 }
@@ -114,6 +124,10 @@ const pressLinks = [
   {
     link: 'https://dou.ua/forums/topic/37139/',
     linkName: 'dou.ua',
+  },
+  {
+    link: 'https://thefix.media/2022/03/18/how-ukrainians-use-russian-social-platforms-to-break-through-russias-propaganda/',
+    linkName: 'thefix.media',
   },
 ]
 

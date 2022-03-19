@@ -65,5 +65,8 @@ export default {
 	pressText5: 'Liberator enables every Internet user with a VPN to attack the websites of Russian propagandists.',
 
 	pressTitle6: 'Technological wars - the story of one  chat with 1000+ volunteers',
-	pressText6: 'How the work in one of the many volunteer IT communities is built.'
+	pressText6: 'How the work in one of the many volunteer IT communities is built.',
+
+	pressTitle7: 'How Ukrainians use Russian social platforms to break through Russia’s propaganda',
+	pressText7: 'An interview with two volunteers spearheading Ukraine’s information war on social media'
 }
