@@ -60,7 +60,19 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
         </DonationButton>
         {project.telegram && (
           <TelegramIconWrapper>
-            <TelegramIcon />
+            <a
+              target="_blank"
+              href={project.link}
+              rel="noopener"
+              onClick={() =>
+                gtag('event', 'external_link_click', {
+                  event_category: 'project-telegram',
+                  event_label: project.link,
+                })
+              }
+            >
+              <TelegramIcon />
+            </a>
           </TelegramIconWrapper>
         )}
       </DonationFooter>
