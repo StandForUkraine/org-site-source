@@ -21,7 +21,11 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
       setShowMoreBtn(true)
     }
   }, [selectedTags])
-  const partnersProjects = useMemo(() => projects.filter((p) => p.partner), [projects])
+  const partnersProjects = useMemo(
+    () =>
+      projects.filter((p) => p.partner).map((project) => ({ ...project, ...project.byLang[lang] })),
+    [projects, lang]
+  )
   const filteredProjects = useMemo(
     () =>
       projects
@@ -74,7 +78,7 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
         )}
       </MoreBtnWrapper>
 
-      <PartnerTitle>Партнери</PartnerTitle>
+      <PartnerTitle>{t('partners')}</PartnerTitle>
       <ListWrapper>
         {partnersProjects.map((project) => (
           <ProjectWidgetSmall key={project.id} project={project} />

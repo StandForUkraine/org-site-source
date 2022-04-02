@@ -117,11 +117,11 @@ export const ProjectPost = styled(DonationPost)`
   flex-direction: column;
   align-self: flex-start;
 
-  @media (max-width: 768px) {
-    .lazyload-wrapper {
-      text-align: center;
-    }
-  }
+  // @media (max-width: 768px) {
+  //   .lazyload-wrapper {
+  //     text-align: center;
+  //   }
+  // }
 `
 
 export const ProjectFooter = styled(DonationFooterCore)`
@@ -130,13 +130,13 @@ export const ProjectFooter = styled(DonationFooterCore)`
   align-items: center;
 
   @media (max-width: 768px) {
-    margin: 8px auto 0;
+    margin: 8px 0 0;
   }
 `
 export const ProjectTitle = styled(DonationTitleCore)`
-  @media (max-width: 768px) {
-    text-align: center;
-  }
+  // @media (max-width: 768px) {
+  //   text-align: center;
+  // }
 `
 const MoreBtn = styled(TextButton)`
   border: none;

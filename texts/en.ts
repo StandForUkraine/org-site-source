@@ -21,6 +21,7 @@ export default {
 	allProjects: 'All projects',
 	less: 'Less',
 	more: 'More',
+	partners: 'Partners',
 
 	footerHeader: `Stand For Ukraine is a volunteer initiative that unites more than 1,000 Ukrainian IT specialists.`,
 	footerGoals: `We cooperate with large Ukrainian businesses: tier 1 IT companies, venture funds, media agencies, holdings, opinion leaders, and many others.`,
