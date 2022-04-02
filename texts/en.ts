@@ -4,7 +4,7 @@ export default {
 	'Housing / shelter': 'Housing / shelter',
 	Maps: 'Maps',
 	'Medical help': 'Medical help',
-	'Other help': 'Other help',
+	Help: 'Help',
 	News: 'News',
 	'Report the enemy': 'Report the enemy',
 	'Cyber frontier': 'Cyber frontier',
@@ -19,6 +19,8 @@ export default {
 	
 	openButton: 'Open',
 	allProjects: 'All projects',
+	less: 'Less',
+	more: 'More',
 
 	footerHeader: `Stand For Ukraine is a volunteer initiative that unites more than 1,000 Ukrainian IT specialists.`,
 	footerGoals: `We cooperate with large Ukrainian businesses: tier 1 IT companies, venture funds, media agencies, holdings, opinion leaders, and many others.`,

@@ -1,7 +1,10 @@
-title: Інтерактивна мапа Opir
-description: Актуальна інформація щодо працюючих аптек, магазинів, пунктів гуманітраної та медичної допомги, АЗС, укриттів та інших важливих точок, що є критичними для цивільних під час воєнних дій.
-logoAlt: Інтерактивна мапа Opir
+title: UA veteran bot
+description: >
+  Допомога ветеранам та їхнім родинам.
+descriptionLong: >
+  У цьому чат-боті можна знайти актуальну інформацію для ветеранів і членів їхніх родин про мобілізацію, пошук амуніції, евакуацію, консультації для родин загиблих тощо.
+logoAlt: UA veteran bot
 tags:
-  - Maps
-  - Practical recommendations
-link: https://opir.org/
+  - Help
+link: https://t.me/ua_veteran_bot
+telegram: https://t.me/ua_veteran_bot

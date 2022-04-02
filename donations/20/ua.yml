@@ -1,7 +1,5 @@
-title: PLAY FOR UKRAINE
-description: Відома гра 2048 де кожен твій хід допомагає атакувати сайти, які використовуються для обслуговування російської армії.
-logoAlt: PLAY FOR UKRAINE
-tags:
-  - Cyber frontier
-  - Other help
-link: https://playforukraine.live/#howitworks2
+title: Don't Fund War
+description: Повний перелік компаній, які досі працюють в Росії, незважаючи на збройну агресію проти України.
+logoAlt: Don't Fund War
+link: https://www.dontfundwar.com
+partner: true

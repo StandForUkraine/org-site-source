@@ -1,7 +1,10 @@
-title: Готовий до всього
-description: Відповіді на найпоширеніші запитання щодо підготовки до надзвичайних ситуацій, а також поради щодо дій в небезпечних ситуаціях.
-logoAlt: Готовий до всього
+title: SaveUA bot
+description: >
+  Зв’язує між собою людей, які мають конкретний запит, із тими, хто заздалегідь зазначив, що може із цим запитом допомогти.
+descriptionLong: >
+  Житло та їжа, транспорт і паливо, одяг та медикаменти, амуніція тощо — за допомогою цього бота ви зможете знайти або надати допомогу в будь-якому регіоні України.
+logoAlt: SaveUA bot
 tags:
-  - Practical recommendations
-link: https://t.me/Hotovyi_do_vsioho_bot
-telegram: https://t.me/Hotovyi_do_vsioho_bot
+  - Help
+link: https://t.me/saveua_bot
+telegram: https://t.me/saveua_bot

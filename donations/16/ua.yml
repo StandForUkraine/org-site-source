@@ -1,7 +1,5 @@
-title: Офіційні UA новини
-description: Усі українські новини з офіційних Facebook джерел в одному місці
-logoAlt: Офіційні UA новини
-tags:
-  - News
-link: https://t.me/official_ua_news
-telegram: https://t.me/official_ua_news
+title: Інтерактивна мапа Opir
+description: Актуальна інформація щодо працюючих аптек, магазинів, пунктів гуманітраної та медичної допомги, АЗС, укриттів та інших важливих точок, що є критичними для цивільних під час воєнних дій.
+logoAlt: Інтерактивна мапа Opir
+link: https://opir.org/
+partner: true

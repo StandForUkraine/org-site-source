@@ -1,9 +1,9 @@
 export const allTags = [
-  'Practical recommendations',
-	'Housing / shelter',
-	'Maps',
-	'Medical help',
-	'Other help',
+  // 'Practical recommendations',
+	// 'Housing / shelter',
+	// 'Maps',
+	// 'Medical help',
+	'Help',
 	'News',
 	'Report the enemy',
 	'Cyber frontier'

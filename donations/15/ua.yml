@@ -1,8 +1,6 @@
-title: refugees.ro
-description: Агрегатор, який має на меті координувати оперативну відповідь на всі потреби українських біженців та волонтерів на кордоні.
-logoAlt: refugees.ro
-tags:
-  - Housing / shelter
-  - Other help
-  - Maps
-link: https://refugees.ro/
+title: Турбота
+description: Медичний бот, який безкоштовно знаходить лікарів для пацієнтів.
+logoAlt: Турбота
+link: https://t.me/Doc2rbot
+telegram: https://t.me/Doc2rbot
+partner: true

@@ -1,7 +1,10 @@
-title: SaveUA bot
-description: Зв’язує між собою людей, які мають конкретний запит, з тими, хто заздалегідь зазначив, що може із цим запитом допомогти.
-logoAlt: SaveUA bot
+title: 200 рф
+description: >
+  Сайт про загиблих та полонених солдатів РФ в Україні. Створено, щоб родичі могли дізнатися про їхню долю.
+descriptionLong: >
+  Сайт, створений представниками МВС України, де оперативно публікують інформацію про полонених і вбитих російських солдатів в Україні з моменту початку окупації.Також працює Telegram-канал "Ищи своих".
+logoAlt: 200 рф
 tags:
-  - Other help
-link: https://t.me/saveua_bot
-telegram: https://t.me/saveua_bot
+  - Cyber frontier
+link: https://200rf.com/
+telegram: https://t.me/rf200_now

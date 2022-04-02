@@ -5,6 +5,9 @@ import LazyLoad from 'react-lazyload'
 import { useGtag } from 'core/utils/useGtag'
 import { useState } from 'react'
 import TelegramIcon from 'assets/telegram.svg'
+import InfoPopup from './InfoPopup'
+import InfoIcon from 'core/assets/info.svg'
+import TextButton from 'core/components/TextButton'
 
 import {
   DonationPost,
@@ -19,6 +22,7 @@ import {
 export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
   const t = useText()
   const gtag = useGtag()
+  const [visibleMoreInfo, setVisibleMoreInfo] = useState(false)
   const getTags = () => project.tags.map((tag) => t(tag))
   return (
     <ProjectPost>
@@ -26,7 +30,7 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
         <ProjectLogo src={project.logo} alt={project.logoAlt || project.title} />
       </LazyLoad>
 
-      <DonationTitle
+      <ProjectTitle
         href={project.link}
         target="_blank"
         rel="noopener"
@@ -38,12 +42,20 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
         }
       >
         {project.title}
-      </DonationTitle>
+      </ProjectTitle>
 
       <DonationTags>{getTags().join(', ')}</DonationTags>
       <DonationDescription>{project.description}</DonationDescription>
 
-      <DonationFooter>
+      {visibleMoreInfo && <DonationDescription>{project.descriptionLong}</DonationDescription>}
+
+      {project.descriptionLong && (
+        <MoreBtn onClick={() => setVisibleMoreInfo(!visibleMoreInfo)}>
+          {visibleMoreInfo ? t('less') : t('more')}
+        </MoreBtn>
+      )}
+
+      <ProjectFooter>
         <DonationButton
           as="a"
           href={project.link}
@@ -58,43 +70,52 @@ export const ProjectWidget = ({ project }: { project: ProjectItem }) => {
         >
           {t('openButton')}
         </DonationButton>
-        {project.telegram && (
-          <TelegramIconWrapper>
-            <a
-              target="_blank"
-              href={project.link}
-              rel="noopener"
-              onClick={() =>
-                gtag('event', 'external_link_click', {
-                  event_category: 'project-telegram',
-                  event_label: project.link,
-                })
-              }
-            >
-              <TelegramIcon />
-            </a>
-          </TelegramIconWrapper>
-        )}
-      </DonationFooter>
+
+        <TelegramLink link={project.link} show={!!project.telegram} />
+      </ProjectFooter>
     </ProjectPost>
   )
 }
 
 export default ProjectWidget
 
-const TelegramIconWrapper = styled.div`
+const TelegramLink = ({ link, show }: { link: string; show: boolean }) => {
+  const gtag = useGtag()
+  if (!show) return null
+  return (
+    <IconWrapper>
+      <a
+        target="_blank"
+        href={link}
+        rel="noopener"
+        onClick={() =>
+          gtag('event', 'external_link_click', {
+            event_category: 'project-telegram',
+            event_label: link,
+          })
+        }
+      >
+        <TelegramIcon />
+      </a>
+    </IconWrapper>
+  )
+}
+
+const IconWrapper = styled.div`
   padding: 5px 10px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 `
-const ProjectLogo = styled(DonationLogo)`
+export const ProjectLogo = styled(DonationLogo)`
   max-height: 64px;
   max-width: 200px;
 `
 
-const ProjectPost = styled(DonationPost)`
+export const ProjectPost = styled(DonationPost)`
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
 
   @media (max-width: 768px) {
     .lazyload-wrapper {
@@ -103,15 +124,22 @@ const ProjectPost = styled(DonationPost)`
   }
 `
 
-const DonationFooter = styled(DonationFooterCore)`
+export const ProjectFooter = styled(DonationFooterCore)`
   margin: auto 0 0;
+  display: flex;
+  align-items: center;
 
   @media (max-width: 768px) {
     margin: 8px auto 0;
   }
 `
-const DonationTitle = styled(DonationTitleCore)`
+export const ProjectTitle = styled(DonationTitleCore)`
   @media (max-width: 768px) {
     text-align: center;
   }
+`
+const MoreBtn = styled(TextButton)`
+  border: none;
+  align-self: flex-start;
+  margin-left: auto;
 `

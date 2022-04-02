@@ -11,10 +11,12 @@ export interface ProjectItemBase {
   logo: string
   logoAlt?: string
   title: string
-  description: string
+	description: string
+	descriptionLong?: string
   tags: Tag[]
   link: string,
-  telegram?: string
+	telegram?: string
+	partner?: boolean
 }
 
 export interface ProjectItem extends ProjectItemBase {

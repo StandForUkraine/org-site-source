@@ -1,7 +1,5 @@
-title: Pop-up for your website
-description: Додайте цей скрипт до свого веб-сайту, щоб відображати спливаюче вікно для відвідувачів з російськими IP-адресами з посиланнями на правдиві джерела новин та інформацію про військовополонених.
-logoAlt: Pop-up for your website
-tags:
-  - News
-  - Other help
-link: https://infowarship.pages.dev/howto-en
+title: Stand For Ukraine
+description: Підтримай Українську Армію та перевірені благодійні організації.
+logoAlt: Stand For Ukraine
+link: https://standforukraine.com/ua
+partner: true

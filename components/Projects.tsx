@@ -4,6 +4,7 @@ import { useText } from 'utils/lang'
 import { allTags, Tag } from 'utils/tags'
 import MultipleSelection from 'core/components/MultipleSelection'
 import ProjectWidget from './ProjectWidget'
+import ProjectWidgetSmall from './ProjectWidgetSmall'
 import { ProjectItem } from 'utils/projects'
 import TextButton from 'core/components/TextButton'
 import styled from 'styled-components'
@@ -20,10 +21,11 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
       setShowMoreBtn(true)
     }
   }, [selectedTags])
-
+  const partnersProjects = useMemo(() => projects.filter((p) => p.partner), [projects])
   const filteredProjects = useMemo(
     () =>
       projects
+        .filter((p) => !p.partner)
         .filter((project) => {
           const tagResult =
             selectedTags.length > 0
@@ -71,11 +73,32 @@ export const Projects = ({ projects }: { projects: ProjectItem[] }) => {
           <TextButton onClick={() => setShowMoreBtn(false)}>{t('allProjects')}</TextButton>
         )}
       </MoreBtnWrapper>
+
+      <PartnerTitle>Партнери</PartnerTitle>
+      <ListWrapper>
+        {partnersProjects.map((project) => (
+          <ProjectWidgetSmall key={project.id} project={project} />
+        ))}
+      </ListWrapper>
     </ProjectsWrapper>
   )
 }
 
 export default Projects
+
+const PartnerTitle = styled.h3`
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+  padding: 12px 8px;
+  margin: 0 0 16px;
+  border-bottom: 1px solid #e0e0e0;
+
+  @media (min-width: 768px) {
+    padding: 12px 0;
+  }
+`
 
 const ProjectsWrapper = styled.div`
   border-top: 1px solid #e0e0e0;

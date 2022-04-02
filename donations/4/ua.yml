@@ -1,8 +1,10 @@
-title: First Aid Robot
-description: Найважливіші інструкції з надання першої медичної допомоги в умовах воєнного стану.
-logoAlt: First Aid Robot
+title: STOP Russian War
+description: >
+  Чат-бот для негайної передачі інформації про ворога до Штабу Збройних Сил України.
+descriptionLong: >
+  Передавайте боту відомості щодо місць дислокації, пересування, обсягів військової техніки та особового складу окупанта. Надана вами інформація буде використана для завдання удару по супротивнику.
+logoAlt: STOP Russian War
 tags:
-  - Medical help
-  - Practical recommendations
-link: https://t.me/FirstAidRobot
-telegram: https://t.me/FirstAidRobot
+  - Report the enemy
+link: https://t.me/stop_russian_war_bot
+telegram: https://t.me/stop_russian_war_bot

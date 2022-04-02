@@ -1,8 +1,10 @@
-title: Бандерівський смузі
-description: Пошук побратимів з виготовлення коктейлів Молотова. Задонатити або отримати компоненти.
-logoAlt: Бандерівський смузі
+title: First Aid Robot
+description: >
+  Найважливіші інструкції з надання першої медичної допомоги в умовах воєнного стану.
+descriptionLong: >
+  Офлайн методичка та простий пошук інформації щодо першої медичної допомоги, систематизованої за категоріями, посилання на відеоінструктажі.
+logoAlt: First Aid Robot
 tags:
-  - Practical recommendations
-  - Other help
-link: https://t.me/share_smuzi_bot
-telegram: https://t.me/share_smuzi_bot
+  - Help
+link: https://t.me/FirstAidRobot
+telegram: https://t.me/FirstAidRobot
