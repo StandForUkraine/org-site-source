@@ -70,5 +70,11 @@ export default {
 	pressText6: 'How the work in one of the many volunteer IT communities is built.',
 
 	pressTitle7: 'How Ukrainians use Russian social platforms to break through Russia’s propaganda',
-	pressText7: 'An interview with two volunteers spearheading Ukraine’s information war on social media'
+	pressText7: 'An interview with two volunteers spearheading Ukraine’s information war on social media',
+
+	pressTitle8: 'IT team from KPI have created a simple tool for DDoS attacks. It can be installed by anyone in 15 minutes.',
+	pressText8: 'The Needles Project is a tool for a collective DDoS attack on Russian sites. The creators urge everyone to install the program on their computers and send links to it to friends and acquaintances around the world. It works well on any device.',
+	
+	pressTitle9: '',
+	pressText9: '',
 }

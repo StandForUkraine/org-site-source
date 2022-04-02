@@ -96,6 +96,28 @@ export default function AboutPress() {
         </PressItemTop>
         <PressItemText>«{t('pressText7')}»</PressItemText>
       </PressItem>
+
+      <PressItem size="large">
+        <PressItemTop>
+          <div>
+            <PressItemTitle>{t('pressTitle8')}</PressItemTitle>
+            <PressLink linkIndex={7} />
+          </div>
+          <PressItemImage src="/press/mc.png" />
+        </PressItemTop>
+        <PressItemText>«{t('pressText8')}»</PressItemText>
+      </PressItem>
+
+      <PressItem size="large">
+        <PressItemTop>
+          <div>
+            <PressItemTitle>{t('pressTitle9')}</PressItemTitle>
+            <PressLink linkIndex={8} />
+          </div>
+          <PressItemImage src="/press/dev.png" />
+        </PressItemTop>
+        <PressItemText>«{t('pressText9')}»</PressItemText>
+      </PressItem>
     </PressWrapper>
   )
 }
@@ -128,6 +150,14 @@ const pressLinks = [
   {
     link: 'https://thefix.media/2022/03/18/how-ukrainians-use-russian-social-platforms-to-break-through-russias-propaganda/',
     linkName: 'thefix.media',
+  },
+  {
+    link: 'https://mc.today/uk/ajtishniki-z-kpi-stvorili-prostij-instrument-dlya-ddos-ataki-jogo-mozhe-zapustiti-bud-hto-za-15-hvilin/',
+    linkName: 'mc.today',
+  },
+  {
+    link: 'https://dev.ua/news/bachu-info',
+    linkName: 'dev.ua',
   },
 ]
 
